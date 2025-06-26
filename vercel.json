@@ -1,8 +1,23 @@
 {
-  "buildCommand": null,
-  "outputDirectory": ".",
-  "public": true,
-"headers": [
-  { "source": "/.well-known/farcaster.json", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }] }
-]
-} 
+    "buildCommand": null,
+    "outputDirectory": ".",
+    "public": true,
+    "headers": [
+      {
+        "source": "/.well-known/farcaster.json",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=3600" }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/.well-known/farcaster.json",
+        "destination": "/.well-known/farcaster.json"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ]
+  }
