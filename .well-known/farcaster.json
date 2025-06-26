@@ -7,11 +7,26 @@
   "frame": {
     "version": "1",
     "name": "Daily Steps Uploader",
-    "iconUrl": "https://dailysteps-ixmp3fha7-melisandecs-projects.vercel.app/icon.png",
-    "homeUrl": "https://dailysteps-ixmp3fha7-melisandecs-projects.vercel.app/",
-    "imageUrl": "https://dailysteps-ixmp3fha7-melisandecs-projects.vercel.app/og-image.png",
+    "subtitle": "Track and share your daily fitness journey",
+    "description": "Upload your daily step count and share your fitness progress with the Farcaster community. Stay motivated by connecting with friends and celebrating your achievements together.",
+    "primaryCategory": "health",
+    "iconUrl": "https://dailysteps-9s5mkf1ur-melisandecs-projects.vercel.app/icon.png",
+    "homeUrl": "https://dailysteps-9s5mkf1ur-melisandecs-projects.vercel.app/",
+    "imageUrl": "https://dailysteps-9s5mkf1ur-melisandecs-projects.vercel.app/image.png",
+    "heroImageUrl": "https://dailysteps-9s5mkf1ur-melisandecs-projects.vercel.app/hero.png",
+    "screenshotUrls": [
+      "https://dailysteps-9s5mkf1ur-melisandecs-projects.vercel.app/screenshot1.png",
+      "https://dailysteps-9s5mkf1ur-melisandecs-projects.vercel.app/screenshot2.png"
+    ],
     "buttonTitle": "Upload Steps",
-    "splashImageUrl": "https://dailysteps-ixmp3fha7-melisandecs-projects.vercel.app/image.png",
-    "splashBackgroundColor": "#ffffff"
+    "splashImageUrl": "https://dailysteps-9s5mkf1ur-melisandecs-projects.vercel.app/splash.png",
+    "splashBackgroundColor": "#667eea",
+    "tags": ["fitness", "health", "steps", "tracking", "social", "wellness"],
+    "tagline": "Step into a healthier tomorrow, one step at a time",
+    "ogTitle": "Daily Steps Uploader – Track Your Fitness Journey",
+    "ogDescription": "Upload your daily step count and share your fitness progress with the Farcaster community. Stay motivated and connected with friends.",
+    "ogImageUrl": "https://dailysteps-9s5mkf1ur-melisandecs-projects.vercel.app/og-image.png",
+    "castShareUrl": "https://warpcast.com/~/compose?text=Check+out+Daily+Steps+Uploader+%F0%9F%9A%B6%EF%B8%8F+Track+your+daily+fitness+journey+on+Farcaster",
+    "webhookUrl": "https://dailysteps-9s5mkf1ur-melisandecs-projects.vercel.app/api/webhook"
   }
 } 
