@@ -6,13 +6,13 @@
     "homeUrl": "https://dailysteps.vercel.app",
     "imageUrl": "https://dailysteps.vercel.app/image.png",
     "buttonTitle": "Upload Steps",
-    "splashImageUrl": "https://dailysteps.vercel.app/image.png",
+    "splashImageUrl": "https://dailysteps.vercel.app/splash.png",
     "splashBackgroundColor": "#667eea",
     "webhookUrl": "https://dailysteps.vercel.app/api/webhook",
     "screenshotUrls": [
       "https://dailysteps.vercel.app/screenshot.png"
     ],
-    "ogImageUrl": "https://dailysteps.vercel.app/og-image.png",
+    "ogImageUrl": "https://dailysteps.vercel.app/og.png",
     "castShareUrl": "https://warpcast.com/~/compose?text=Check+out+Daily+Steps+Uploader+%F0%9F%9A%B6%EF%B8%8F+Track+your+daily+fitness+journey+on+Farcaster",
     "ogDescription": "Upload your steps and share your fitness journey with friends on Farcaster.",
     "ogTitle": "Daily Steps Uploader",
@@ -24,7 +24,7 @@
       "wellness"
     ],
     "tagline": "Share your steps!",
-    "heroImageUrl": "https://dailysteps.vercel.app/image.png",
+    "heroImageUrl": "https://dailysteps.vercel.app/hero.png",
     "description": "Upload your steps and share your fitness progress with the Farcaster community. Stay motivated with friends.",
     "subtitle": "Share your daily step count",
     "primaryCategory": "health-fitness"
