@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Mini App</title>
+  </head>
+  <body>
+    <!-- index.html -->
+    <h1>Upload Your Daily Steps</h1>
+    <input type="number" id="steps" placeholder="Enter steps" />
+    <button id="upload">Upload</button>
+    <div id="status"></div>
+    <script type="module">
+      import { sdk } from 'https://esm.sh/@farcaster/frame-sdk';
+
+      document.getElementById('upload').onclick = async () => {
+        const steps = document.getElementById('steps').value;
+        if (!steps) {
+          document.getElementById('status').textContent = "Please enter your steps.";
+          return;
+        }
+        // Compose a Farcaster cast with the steps count
+        try {
+          await sdk.actions.composeCast({
+            text: `🚶‍♂️ Today's steps: ${steps}`
+          });
+          document.getElementById('status').textContent = "Steps uploaded!";
+        } catch (e) {
+          document.getElementById('status').textContent = "Failed to upload.";
+        }
+      };
+
+      // Initialize the app
+      (async () => {
+        // Hide splash screen when ready
+        await sdk.actions.ready();
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "accountAssociation": {
+    "header": "PLACEHOLDER_WILL_BE_FILLED_LATER",
+    "payload": "PLACEHOLDER_WILL_BE_FILLED_LATER",
+    "signature": "PLACEHOLDER_WILL_BE_FILLED_LATER"
+  },
+  "frame": {
+    "version": "1",
+    "name": "Daily Steps Uploader",
+    "iconUrl": "https://dailysteps-jvknxfcoq-melisandecs-projects.vercel.app/icon.png",
+    "homeUrl": "https://dailysteps-jvknxfcoq-melisandecs-projects.vercel.app/",
+    "imageUrl": "https://dailysteps-jvknxfcoq-melisandecs-projects.vercel.app/og-image.png",
+    "buttonTitle": "Upload Steps",
+    "splashImageUrl": "https://dailysteps-jvknxfcoq-melisandecs-projects.vercel.app/splash.png",
+    "splashBackgroundColor": "#ffffff"
+  }
+} 
