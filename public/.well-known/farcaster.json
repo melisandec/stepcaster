@@ -1,32 +1,38 @@
+Manifest JSON
 {
-  "accountAssociation": {
-    "header": "eyJmaWQiOjQyOTQ1MCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDA0NWMzNzZjY0FkMkI5NUFBZTdGNTQyYjdDRjkyOGI1RGJlYTM4NGQifQ",
-    "payload": "eyJkb21haW4iOiJkYWlseXN0ZXBzLnZlcmNlbC5hcHAifQ",
-    "signature": "MHgzOGM0ZDUzNDFlYmE1NjAyZjg5NTQ1OGQ1NGFmM2JjOWQyMmRhZTBjNzIxODZiYjNkZTk3NjIyMWFmMzlmYjZkNzI4NTg5MGI4YTg0ZjVlNGQ5ZTVkMzk3NmJkNTQ2MWM2ZDBhYmJlZDIxNjUzNTc2MjljNmZlMWZmNTI3YTFiMDFi"
-  },
   "frame": {
+    "name": "Step Caster",
     "version": "1",
-    "name": "Daily Steps Uploader",
-    "subtitle": "Share your daily step count",
-    "description": "Upload your steps and share your fitness progress with the Farcaster community. Stay motivated with friends.",
-    "primaryCategory": "health",
-    "iconUrl": "https://dailysteps-fcslgn7d4-melisandecs-projects.vercel.app/icon.png",
-    "homeUrl": "https://dailysteps-fcslgn7d4-melisandecs-projects.vercel.app/",
-    "imageUrl": "https://dailysteps-fcslgn7d4-melisandecs-projects.vercel.app/image.png",
-    "heroImageUrl": "https://dailysteps-fcslgn7d4-melisandecs-projects.vercel.app/hero.png",
-    "screenshotUrls": [
-      "https://dailysteps-fcslgn7d4-melisandecs-projects.vercel.app/screenshot1.png",
-      "https://dailysteps-fcslgn7d4-melisandecs-projects.vercel.app/screenshot2.png"
-    ],
+    "iconUrl": "https://dailysteps.vercel.app/icon.png",
+    "homeUrl": "https://dailysteps.vercel.app",
+    "imageUrl": "https://dailysteps.vercel.app/image.png",
     "buttonTitle": "Upload Steps",
-    "splashImageUrl": "https://dailysteps-fcslgn7d4-melisandecs-projects.vercel.app/splash.png",
+    "splashImageUrl": "https://dailysteps.vercel.app/image.png",
     "splashBackgroundColor": "#667eea",
-    "tags": ["fitness", "health", "steps", "social", "wellness"],
-    "tagline": "Share your steps, stay motivated",
-    "ogTitle": "Daily Steps Uploader",
-    "ogDescription": "Upload your steps and share your fitness journey with friends on Farcaster.",
-    "ogImageUrl": "https://dailysteps-fcslgn7d4-melisandecs-projects.vercel.app/og-image.png",
+    "webhookUrl": "https://dailysteps.vercel.app/api/webhook",
+    "screenshotUrls": [
+      "https://dailysteps.vercel.app/screenshot.png"
+    ],
+    "ogImageUrl": "https://dailysteps.vercel.app/og-image.png",
     "castShareUrl": "https://warpcast.com/~/compose?text=Check+out+Daily+Steps+Uploader+%F0%9F%9A%B6%EF%B8%8F+Track+your+daily+fitness+journey+on+Farcaster",
-    "webhookUrl": "https://dailysteps-fcslgn7d4-melisandecs-projects.vercel.app/api/webhook"
+    "ogDescription": "Upload your steps and share your fitness journey with friends on Farcaster.",
+    "ogTitle": "Daily Steps Uploader",
+    "tags": [
+      "social",
+      "fitness",
+      "health",
+      "steps",
+      "wellness"
+    ],
+    "tagline": "Share your steps!",
+    "heroImageUrl": "https://dailysteps.vercel.app/image.png",
+    "description": "Upload your steps and share your fitness progress with the Farcaster community. Stay motivated with friends.",
+    "subtitle": "Share your daily step count",
+    "primaryCategory": "health-fitness"
+  },
+  "accountAssociation": {
+    "header": "eyJmaWQiOjQyOTQ1MCwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDk1OTk3MzZGQTU0NzI3MDQwOGFGZjhGNTNCMTZCMDYyODNEM2NDMDUifQ",
+    "payload": "eyJkb21haW4iOiJkYWlseXN0ZXBzLnZlcmNlbC5hcHAifQ",
+    "signature": "qTeZ5/mtgIhU+YdlJwrKsBQWCUhTVveubwvvfTG+35Vdfzko0tHVDCllxvEODSlsFYXHIJiA6jEGKtCjGWjoTBw="
   }
-} 
+}
