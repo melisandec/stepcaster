@@ -13,7 +13,7 @@
       "https://dailysteps.vercel.app/screenshot.png"
     ],
     "ogImageUrl": "https://dailysteps.vercel.app/og.png",
-    "castShareUrl": "https://warpcast.com/~/compose?text=Check+out+Daily+Steps+Uploader+%F0%9F%9A%B6%EF%B8%8F+Track+your+daily+fitness+journey+on+Farcaster",
+    "castShareUrl": "https://dailysteps.vercel.app",
     "ogDescription": "Upload your steps and share your fitness journey with friends on Farcaster.",
     "ogTitle": "Daily Steps Uploader",
     "tags": [
