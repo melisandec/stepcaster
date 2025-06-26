@@ -1,0 +1,32 @@
+{
+  "accountAssociation": {
+    "header": "PLACEHOLDER_WILL_BE_FILLED_LATER",
+    "payload": "PLACEHOLDER_WILL_BE_FILLED_LATER",
+    "signature": "PLACEHOLDER_WILL_BE_FILLED_LATER"
+  },
+  "frame": {
+    "version": "1",
+    "name": "Daily Steps Uploader",
+    "subtitle": "Track and share your daily fitness journey",
+    "description": "Upload your daily step count and share your fitness progress with the Farcaster community. Stay motivated by connecting with friends and celebrating your achievements together.",
+    "primaryCategory": "health",
+    "iconUrl": "https://dailysteps-jc4pga1os-melisandecs-projects.vercel.app/icon.png",
+    "homeUrl": "https://dailysteps-jc4pga1os-melisandecs-projects.vercel.app/",
+    "imageUrl": "https://dailysteps-jc4pga1os-melisandecs-projects.vercel.app/image.png",
+    "heroImageUrl": "https://dailysteps-jc4pga1os-melisandecs-projects.vercel.app/hero.png",
+    "screenshotUrls": [
+      "https://dailysteps-jc4pga1os-melisandecs-projects.vercel.app/screenshot1.png",
+      "https://dailysteps-jc4pga1os-melisandecs-projects.vercel.app/screenshot2.png"
+    ],
+    "buttonTitle": "Upload Steps",
+    "splashImageUrl": "https://dailysteps-jc4pga1os-melisandecs-projects.vercel.app/splash.png",
+    "splashBackgroundColor": "#667eea",
+    "tags": ["fitness", "health", "steps", "tracking", "social", "wellness"],
+    "tagline": "Step into a healthier tomorrow, one step at a time",
+    "ogTitle": "Daily Steps Uploader – Track Your Fitness Journey",
+    "ogDescription": "Upload your daily step count and share your fitness progress with the Farcaster community. Stay motivated and connected with friends.",
+    "ogImageUrl": "https://dailysteps-jc4pga1os-melisandecs-projects.vercel.app/og-image.png",
+    "castShareUrl": "https://warpcast.com/~/compose?text=Check+out+Daily+Steps+Uploader+%F0%9F%9A%B6%EF%B8%8F+Track+your+daily+fitness+journey+on+Farcaster",
+    "webhookUrl": "https://dailysteps-jc4pga1os-melisandecs-projects.vercel.app/api/webhook"
+  }
+} 
