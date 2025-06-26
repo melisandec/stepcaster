@@ -3,38 +3,314 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Mini App</title>
+    <title>Daily Steps Uploader</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 24px;
+        padding: 40px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .logo {
+        font-size: 48px;
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      h1 {
+        color: #2d3748;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .subtitle {
+        color: #718096;
+        font-size: 16px;
+        margin-bottom: 32px;
+        font-weight: 400;
+      }
+
+      .input-group {
+        margin-bottom: 24px;
+        position: relative;
+      }
+
+      .steps-input {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 18px;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        background: white;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        color: #2d3748;
+      }
+
+      .steps-input:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .steps-input::placeholder {
+        color: #a0aec0;
+        font-weight: 400;
+      }
+
+      .upload-btn {
+        width: 100%;
+        padding: 16px 24px;
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .upload-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+      }
+
+      .upload-btn:active {
+        transform: translateY(0);
+      }
+
+      .upload-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .status {
+        margin-top: 20px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 14px;
+        min-height: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .status.success {
+        background: #c6f6d5;
+        color: #22543d;
+        border: 1px solid #9ae6b4;
+      }
+
+      .status.error {
+        background: #fed7d7;
+        color: #742a2a;
+        border: 1px solid #feb2b2;
+      }
+
+      .status.info {
+        background: #bee3f8;
+        color: #2a4365;
+        border: 1px solid #90cdf4;
+      }
+
+      .stats {
+        margin-top: 24px;
+        padding: 20px;
+        background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+      }
+
+      .stats h3 {
+        color: #4a5568;
+        font-size: 16px;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .stats p {
+        color: #718096;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .loading {
+        display: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 1s ease-in-out infinite;
+        margin: 0 auto;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      .btn-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 30px 20px;
+          margin: 10px;
+        }
+        
+        h1 {
+          font-size: 24px;
+        }
+        
+        .subtitle {
+          font-size: 14px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- index.html -->
-    <h1>Upload Your Daily Steps</h1>
-    <input type="number" id="steps" placeholder="Enter steps" />
-    <button id="upload">Upload</button>
-    <div id="status"></div>
+    <div class="container">
+      <div class="logo">🚶‍♂️</div>
+      <h1>Daily Steps Uploader</h1>
+      <p class="subtitle">Track your daily activity and share it on Farcaster</p>
+      
+      <div class="input-group">
+        <input 
+          type="number" 
+          id="steps" 
+          class="steps-input" 
+          placeholder="Enter your steps for today" 
+          min="0"
+          max="999999"
+        />
+      </div>
+      
+      <button id="upload" class="upload-btn">
+        <div class="btn-content">
+          <span id="btn-text">Upload to Farcaster</span>
+          <div id="loading" class="loading"></div>
+        </div>
+      </button>
+      
+      <div id="status" class="status"></div>
+      
+      <div class="stats">
+        <h3>💡 How it works</h3>
+        <p>Enter your daily step count and share your progress with the Farcaster community. Your steps will be posted as a cast with a walking emoji.</p>
+      </div>
+    </div>
+
     <script type="module">
       import { sdk } from 'https://esm.sh/@farcaster/frame-sdk';
 
-      document.getElementById('upload').onclick = async () => {
-        const steps = document.getElementById('steps').value;
+      const stepsInput = document.getElementById('steps');
+      const uploadBtn = document.getElementById('upload');
+      const btnText = document.getElementById('btn-text');
+      const loading = document.getElementById('loading');
+      const status = document.getElementById('status');
+
+      function showStatus(message, type = 'info') {
+        status.textContent = message;
+        status.className = `status ${type}`;
+      }
+
+      function setLoading(isLoading) {
+        uploadBtn.disabled = isLoading;
+        loading.style.display = isLoading ? 'block' : 'none';
+        btnText.textContent = isLoading ? 'Uploading...' : 'Upload to Farcaster';
+      }
+
+      uploadBtn.onclick = async () => {
+        const steps = stepsInput.value.trim();
+        
         if (!steps) {
-          document.getElementById('status').textContent = "Please enter your steps.";
+          showStatus("Please enter your steps for today.", 'error');
+          stepsInput.focus();
           return;
         }
-        // Compose a Farcaster cast with the steps count
+
+        if (steps < 0 || steps > 999999) {
+          showStatus("Please enter a valid number of steps (0-999,999).", 'error');
+          stepsInput.focus();
+          return;
+        }
+
+        setLoading(true);
+        showStatus("Connecting to Farcaster...", 'info');
+
         try {
           await sdk.actions.composeCast({
-            text: `🚶‍♂️ Today's steps: ${steps}`
+            text: `🚶‍♂️ Today's steps: ${parseInt(steps).toLocaleString()}`
           });
-          document.getElementById('status').textContent = "Steps uploaded!";
+          
+          showStatus("✅ Steps uploaded successfully to Farcaster!", 'success');
+          stepsInput.value = '';
+          stepsInput.focus();
+
+          // Example: Registering with Farcaster
+          await sdk.registerWebhook({
+            url: 'https://your-app.com/webhook/farcaster',
+            events: ['cast.created', 'frame.interaction']
+          });
         } catch (e) {
-          document.getElementById('status').textContent = "Failed to upload.";
+          console.error('Upload error:', e);
+          showStatus("❌ Failed to upload. Please try again.", 'error');
+        } finally {
+          setLoading(false);
         }
       };
 
+      // Enter key support
+      stepsInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          uploadBtn.click();
+        }
+      });
+
       // Initialize the app
       (async () => {
-        // Hide splash screen when ready
-        await sdk.actions.ready();
+        try {
+          await sdk.actions.ready();
+          showStatus("Ready to upload your steps! 🚀", 'success');
+        } catch (e) {
+          console.error('SDK ready error:', e);
+          showStatus("App loaded. You can start uploading your steps.", 'info');
+        }
       })();
     </script>
   </body>

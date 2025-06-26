@@ -1,17 +1,17 @@
 {
   "accountAssociation": {
-    "header": "https://dailysteps-jvknxfcoq-melisandecs-projects.vercel.app/header.png",
-    "payload": "https://dailysteps-jvknxfcoq-melisandecs-projects.vercel.app/payload.png",
-    "signature": "https://dailysteps-jvknxfcoq-melisandecs-projects.vercel.app/signature.png"
+    "header": "PLACEHOLDER_WILL_BE_FILLED_LATER",
+    "payload": "PLACEHOLDER_WILL_BE_FILLED_LATER",
+    "signature": "PLACEHOLDER_WILL_BE_FILLED_LATER"
   },
   "frame": {
     "version": "1",
     "name": "Daily Steps Uploader",
-    "iconUrl": "https://dailysteps-jvknxfcoq-melisandecs-projects.vercel.app/icon.png",
-    "homeUrl": "https://dailysteps-jvknxfcoq-melisandecs-projects.vercel.app/",
-    "imageUrl": "https://dailysteps-jvknxfcoq-melisandecs-projects.vercel.app/image.png",
+    "iconUrl": "https://dailysteps-ixmp3fha7-melisandecs-projects.vercel.app/icon.png",
+    "homeUrl": "https://dailysteps-ixmp3fha7-melisandecs-projects.vercel.app/",
+    "imageUrl": "https://dailysteps-ixmp3fha7-melisandecs-projects.vercel.app/og-image.png",
     "buttonTitle": "Upload Steps",
-    "splashImageUrl": "https://dailysteps-jvknxfcoq-melisandecs-projects.vercel.app/splash.png",
+    "splashImageUrl": "https://dailysteps-ixmp3fha7-melisandecs-projects.vercel.app/image.png",
     "splashBackgroundColor": "#ffffff"
   }
 } 
