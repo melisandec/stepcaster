@@ -2,25 +2,7 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "public": true,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/.well-known/farcaster.json",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
-      ]
-    }
-  ]
+"headers": [
+  { "source": "/.well-known/farcaster.json", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }] }
+]
 } 
