@@ -16,7 +16,7 @@ function App() {
     <GamificationProvider>
       <div className="app">
         <header className="app-header">
-          <h1>🚶‍♂️ Daily Steps Uploader</h1>
+          <h1>🚶‍♂️ Step Caster</h1>
           <div className="header-actions">
             <button 
               className="toggle-button"
