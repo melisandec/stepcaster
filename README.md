@@ -9,6 +9,14 @@ A Farcaster mini app that allows users to track and share their daily step count
 - **Modern UI**: Beautiful, responsive design with gradient backgrounds and smooth animations
 - **Web3 Ready**: Built with Wagmi for Ethereum wallet connectivity
 - **Frame Support**: Compatible with Farcaster Frames for enhanced social sharing
+- **🎮 Gamification System**: Complete rewards and progression system including:
+  - **XP & Leveling**: Earn experience points and level up based on your activity
+  - **StepCoins**: Virtual currency earned through step tracking
+  - **Achievements**: Unlock badges and rewards for reaching milestones
+  - **Daily & Weekly Quests**: Complete challenges for bonus rewards
+  - **Avatar Customization**: Purchase and equip items with your earned coins
+  - **Real-time Notifications**: Get notified of achievements, level-ups, and quest completions
+  - **Streak Tracking**: Maintain daily streaks for bonus rewards
 
 ## Tech Stack
 
