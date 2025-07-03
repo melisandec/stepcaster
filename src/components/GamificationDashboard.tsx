@@ -20,8 +20,8 @@ export const GamificationDashboard: React.FC = () => {
   const [importError, setImportError] = useState<string | null>(null);
 
   // Simulate a connected wallet for local testing
-  const address = "0xFAKEADDRESS1234567890";
-  const isConnected = true;
+//   const address = "0xFAKEADDRESS1234567890";
+//   const isConnected = true;
   // Uncomment to use real wallet connection
   // const { address, isConnected } = useAccount();
 

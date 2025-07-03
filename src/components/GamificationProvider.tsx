@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { useAccount } from 'wagmi';
+// import { useAccount } from 'wagmi'; // so far we are simulating a connected wallet so we don't need to use wagmi cos we are not using useAccount
 import { GamificationService } from '../services/gamificationService';
 import { User, Achievement, Quest, AvatarItem, Notification } from '../types/gamification';
 
