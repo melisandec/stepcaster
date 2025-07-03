@@ -18,11 +18,12 @@ function App() {
         <header className="app-header">
           <h1>🚶‍♂️ Step Caster</h1>
           <div className="header-actions">
-            <button 
+                        <button
+              type="button"
               className="toggle-button"
               onClick={() => setShowGamification(!showGamification)}
             >
-              {showGamification ? '📊 Basic Mode' : '🎮 Gamification Mode'}
+              {showGamification ? "📊 Basic Mode" : "🎮 Gamification Mode"}
             </button>
           </div>
         </header>
@@ -78,9 +79,9 @@ function StepUploader() {
   const [message, setMessage] = useState('');
 
   const handleUpload = async () => {
-    const stepCount = parseInt(steps);
-    if (isNaN(stepCount) || stepCount <= 0) {
-      setMessage('Please enter a valid number of steps.');
+    const stepCount = Number.parseInt(steps);
+    if (Number.isNaN(stepCount) || stepCount <= 0) {
+      setMessage("Please enter a valid number of steps.");
       return;
     }
 
@@ -116,11 +117,12 @@ function StepUploader() {
           max="999999"
         />
         <button
+          type="button"
           onClick={handleUpload}
           disabled={isUploading || !steps}
           className="upload-button"
         >
-          {isUploading ? 'Uploading...' : '🚶‍♂️ Upload to Farcaster'}
+          {isUploading ? "Uploading..." : "🚶‍♂️ Upload to Farcaster"}
         </button>
       </div>
       {message && (

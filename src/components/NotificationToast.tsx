@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Notification } from '../types/gamification';
-import './NotificationToast.css';
+import type React from "react";
+import { useEffect, useState } from "react";
+import type { Notification } from "../types/gamification";
+import "./NotificationToast.css";
 
 interface NotificationToastProps {
   notification: Notification;
@@ -74,7 +75,7 @@ export const NotificationToast: React.FC<NotificationToastProps> = ({
           {notification.timestamp.toLocaleTimeString()}
         </span>
       </div>
-      <button className="notification-close" onClick={handleClose}>
+      <button type="button" className="notification-close" onClick={handleClose}>
         ×
       </button>
     </div>

@@ -230,14 +230,14 @@ export const SEASONAL_EVENTS: SeasonalEvent[] = [
         type: 'seasonal',
         target: 100000,
         current: 0,
-        reward: { xp: 1000, coins: 250, items: [AVATAR_ITEMS.find(item => item.id === 'crown')!] },
+        reward: { xp: 1000, coins: 250, items: [AVATAR_ITEMS.find(item => item.id === 'crown') || AVATAR_ITEMS[0]] },
         expiresAt: new Date('2024-08-31'),
         completed: false
       }
     ],
     specialRewards: [
-      AVATAR_ITEMS.find(item => item.id === 'crown')!,
-      AVATAR_ITEMS.find(item => item.id === 'bg_mountain')!
+      AVATAR_ITEMS.find(item => item.id === 'crown') || AVATAR_ITEMS[0],
+      AVATAR_ITEMS.find(item => item.id === 'bg_mountain') || AVATAR_ITEMS[1]
     ]
   }
 ];
