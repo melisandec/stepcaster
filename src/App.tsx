@@ -1,4 +1,4 @@
-import { sdk } from "@farcaster/frame-sdk";
+import miniapp from "@farcaster/miniapp-sdk";
 import { useEffect, useState } from "react";
 import { useAccount, useConnect, useSignMessage } from "wagmi";
 import { GamificationProvider } from "./components/GamificationProvider";
@@ -9,7 +9,7 @@ function App() {
   const [showGamification, setShowGamification] = useState(false);
 
   useEffect(() => {
-    sdk.actions.ready();
+    miniapp.actions.ready();
   }, []);
 
   return (
@@ -88,7 +88,7 @@ function StepUploader() {
     setMessage('');
 
     try {
-      await sdk.actions.composeCast({
+      await miniapp.actions.composeCast({
         text: `🚶‍♂️ Today's steps: ${stepCount.toLocaleString()}`
       });
       
